@@ -1,432 +1,227 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>セキマコトのアトリエ</title>
+<title>セキマコトの小さな美術館</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-
-margin:0;
-
-font-family:
-"Hiragino Sans",
-"Yu Gothic",
-sans-serif;
-
-background:#fffaf9;
-
-color:#444;
-
-line-height:1.9;
-
+  margin:0;
+  font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+  background:#fffaf8;
+  color:#3f3a37;
+  line-height:1.9;
 }
-
-/*----------------*/
 
 header{
-
-background:#fff2f2;
-
-text-align:center;
-
-padding:55px 20px;
-
+  text-align:center;
+  padding:58px 22px 50px;
+  background:#fff1f1;
 }
 
-header img{
-
-width:170px;
-
-max-width:60%;
-
+.logo{
+  width:170px;
+  max-width:58%;
 }
 
 h1{
-
-font-size:38px;
-
-margin:18px 0 5px;
-
+  font-size:34px;
+  margin:18px 0 4px;
+  letter-spacing:.08em;
 }
 
 .subtitle{
-
-color:#777;
-
-font-size:18px;
-
+  color:#7d7470;
+  font-size:17px;
 }
 
 .catch{
-
-margin-top:25px;
-
-font-size:26px;
-
-line-height:1.5;
-
-font-weight:300;
-
+  margin-top:24px;
+  font-size:22px;
+  color:#5f5652;
+  line-height:1.7;
 }
 
-/*----------------*/
-
 main{
-
-max-width:950px;
-
-margin:auto;
-
-padding:25px;
-
+  max-width:980px;
+  margin:auto;
+  padding:30px 20px 70px;
 }
 
 section{
+  margin:58px 0;
+}
 
-margin:70px 0;
-
+.card{
+  background:#fff;
+  border-radius:24px;
+  padding:30px 24px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
 h2{
-
-font-size:32px;
-
-margin-bottom:20px;
-
-border-left:10px solid #f0aeb8;
-
-padding-left:15px;
-
+  font-size:26px;
+  border-left:10px solid #efadb8;
+  padding-left:14px;
+  margin-bottom:22px;
 }
 
-/*----------------*/
-
-.welcome{
-
-font-size:20px;
-
-line-height:2;
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.06);
-
+.lead{
+  font-size:18px;
 }
-
-/*----------------*/
 
 .books{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:35px;
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 .book{
-
-background:white;
-
-border-radius:22px;
-
-overflow:hidden;
-
-box-shadow:0 5px 18px rgba(0,0,0,.08);
-
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .book img{
-
-width:100%;
-
-display:block;
-
+  width:100%;
+  display:block;
 }
 
 .book-body{
-
-padding:20px;
-
+  padding:22px;
 }
 
 .book h3{
-
-margin-top:0;
-
-font-size:24px;
-
+  margin:0 0 10px;
+  font-size:21px;
 }
 
 .button{
-
-display:inline-block;
-
-margin-top:12px;
-
-padding:11px 22px;
-
-border-radius:999px;
-
-background:#ef9aa8;
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:.2s;
-
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 20px;
+  border-radius:999px;
+  background:#8c7a70;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.button:hover{
-
-background:#e17d90;
-
+.button.pink{
+  background:#ef9aa8;
 }
 
-/*----------------*/
-
-.note{
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.06);
-
+.small{
+  color:#7d7470;
+  font-size:15px;
 }
-
-/*----------------*/
 
 footer{
-
-margin-top:80px;
-
-padding:40px;
-
-text-align:center;
-
-color:#999;
-
+  text-align:center;
+  color:#9b918c;
+  padding:40px 20px;
+  font-size:14px;
 }
 
+@media(max-width:600px){
+  h1{font-size:31px}
+  .catch{font-size:20px}
+  h2{font-size:24px}
+}
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<img src="images/kurousa-bust.png" alt="くろうさ">
-
-<h1>セキマコト</h1>
-
-<div class="subtitle">
-
-点描画・イラスト・絵本
-
-</div>
-
-<div class="catch">
-
-点をひとつ。<br>
-
-またひとつ。
-
-</div>
-
+  <img class="logo" src="images/kurousa-bust.png" alt="くろうさ">
+  <h1>セキマコト</h1>
+  <div class="subtitle">点描画・イラスト・絵本</div>
+  <div class="catch">
+    点をひとつ。<br>
+    またひとつ。<br>
+    やさしい世界が、少しずつ生まれていきます。
+  </div>
 </header>
 
 <main>
 
 <section>
-
-<div class="welcome">
-
-ようこそ。
-
-<br><br>
-
-ここは、
-
-点描画や絵本、
-
-小さなうさぎたちを描いている
-
-「セキマコトのアトリエ」です。
-
-<br><br>
-
-少しだけ心がやわらぐ時間を
-
-過ごしていただけたら嬉しいです。
-
-</div>
-
+  <div class="card lead">
+    ようこそ。<br><br>
+    ここは、セキマコトの小さな美術館です。<br><br>
+    うさぎや点描画、絵本の世界を、
+    ゆっくり眺めていただけたら嬉しいです。
+  </div>
 </section>
 
 <section>
+  <h2>本棚</h2>
 
-<h2>作品</h2>
+  <div class="books">
 
-<div class="books">
+    <div class="book">
+      <img src="images/kurousa01-cover.png" alt="いちごほっぺのくろうさ01">
+      <div class="book-body">
+        <h3>いちごほっぺのくろうさ 01</h3>
+        <p>
+          いちごほっぺがチャームポイントの
+          「くろうさ」の小さな作品集です。
+        </p>
+        <a class="button pink" href="#" target="_blank">Amazonで見る</a>
+      </div>
+    </div>
 
-<div class="book">
+    <div class="book">
+      <img src="images/tennoyume01-cover.png" alt="点の夢01">
+      <div class="book-body">
+        <h3>点の夢 01</h3>
+        <p>
+          点描という技法で描いた作品をまとめた画集です。
+          静かな時間を楽しんでいただけたら嬉しいです。
+        </p>
+        <a class="button pink" href="#" target="_blank">Amazonで見る</a>
+      </div>
+    </div>
 
-<img src="images/kurousa01-cover.png">
-
-<div class="book-body">
-
-<h3>
-
-いちごほっぺのくろうさ01
-
-</h3>
-
-<p>
-
-いちごほっぺがチャームポイントの
-
-くろうさの日常を描いた作品集です。
-
-</p>
-
-<a class="button"
-
-href="#">
-
-Amazonで見る
-
-</a>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<img src="images/tennoyume01-cover.png">
-
-<div class="book-body">
-
-<h3>
-
-点の夢01
-
-</h3>
-
-<p>
-
-点描という技法で描いた
-
-作品をまとめた画集です。
-
-</p>
-
-<a class="button"
-
-href="#">
-
-Amazonで見る
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <section>
-
-<h2>プロフィール</h2>
-
-<div class="note">
-
-うさぎや点描画を中心に、
-
-やさしく静かな世界を描いています。
-
-<br><br>
-
-作品を通して、
-
-少しだけ心がやわらぐ時間を
-
-届けられたら嬉しいです。
-
-</div>
-
+  <h2>プロフィール</h2>
+  <div class="card">
+    うさぎや点描画を中心に、
+    やさしく静かな世界を描いています。<br><br>
+    作品を通して、少しだけ心がやわらぐ時間を
+    届けられたら嬉しいです。
+  </div>
 </section>
 
 <section>
-
-<h2>制作中</h2>
-
-<div class="note">
-
-📖 絵本
-
-<b>「てんしのクレヨン」</b>
-
-制作中です。
-
-<br><br>
-
-完成しましたら、
-
-こちらでもご紹介いたします。
-
-</div>
-
+  <h2>制作中</h2>
+  <div class="card">
+    📖 絵本『てんしのクレヨン』制作中<br><br>
+    🎨 点描画入門書も準備中です。
+  </div>
 </section>
 
 <section>
-
-<h2>ダウンロード</h2>
-
-<div class="note">
-
-点描画入門書の
-
-特典ダウンロードページを
-
-準備中です。
-
-</div>
-
+  <h2>ダウンロード</h2>
+  <div class="card">
+    点描画入門書の特典ダウンロードページを準備中です。<br>
+    <span class="small">ぬりえPDFなどを公開予定です。</span>
+  </div>
 </section>
 
 <footer>
-
-© Seki Makoto
-
+  © Seki Makoto
 </footer>
 
 </main>
 
 </body>
-
 </html>

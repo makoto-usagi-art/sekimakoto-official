@@ -1,164 +1,313 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>セキマコト公式サイト</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: #fffaf8;
-      color: #3f3a37;
-      line-height: 1.9;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      text-align: center;
-      padding: 56px 20px 36px;
-      background: #fff3f0;
-    }
+<title>セキマコト公式サイト</title>
 
-    header .icon {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+<style>
 
-    h1 {
-      font-size: 32px;
-      margin: 0;
-      letter-spacing: 0.08em;
-    }
+body{
+    margin:0;
+    background:#fffaf8;
+    font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+    color:#444;
+}
 
-    header p {
-      margin-top: 12px;
-      color: #7a6f6a;
-    }
+header{
 
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px 64px;
-    }
+    background:#fff3f3;
+    text-align:center;
+    padding:40px 20px;
 
-    section {
-      background: #ffffff;
-      border-radius: 22px;
-      padding: 28px 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
-    }
+}
 
-    h2 {
-      font-size: 22px;
-      margin-top: 0;
-      border-bottom: 2px dotted #f1b8b8;
-      padding-bottom: 8px;
-    }
+header img{
 
-    .book {
-      margin-bottom: 24px;
-    }
+    width:180px;
+    max-width:70%;
 
-    .book h3 {
-      margin-bottom: 6px;
-      font-size: 18px;
-    }
+}
 
-    a.button {
-      display: inline-block;
-      background: #e98f91;
-      color: white;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 999px;
-      margin: 6px 6px 6px 0;
-      font-size: 15px;
-    }
+h1{
 
-    a.button.sub {
-      background: #9b8f88;
-    }
+    margin-top:15px;
+    margin-bottom:5px;
+    font-size:34px;
 
-    footer {
-      text-align: center;
-      color: #9a8f89;
-      font-size: 14px;
-      padding: 32px 20px;
-    }
-  </style>
+}
+
+.subtitle{
+
+    color:#777;
+
+}
+
+.catch{
+
+    margin-top:25px;
+    font-size:20px;
+    color:#666;
+
+}
+
+main{
+
+    width:92%;
+    max-width:900px;
+    margin:auto;
+
+}
+
+section{
+
+    margin-top:45px;
+
+}
+
+h2{
+
+    border-left:8px solid #efb0b8;
+    padding-left:12px;
+
+}
+
+.profile{
+
+    line-height:2;
+
+}
+
+.books{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+.book{
+
+    background:white;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    padding:20px;
+
+}
+
+.book img{
+
+    width:100%;
+    border-radius:10px;
+
+}
+
+.book h3{
+
+    margin-top:15px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#f09ca8;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+}
+
+.button:hover{
+
+    background:#e57d8d;
+
+}
+
+footer{
+
+    margin-top:60px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:14px;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-  <div class="icon">🐰</div>
-  <h1>セキマコト</h1>
-  <p>点描画・イラスト・絵本</p>
+
+<img src="kurousa-bust.png">
+
+<h1>セキマコト</h1>
+
+<p class="subtitle">
+
+点描画・イラスト・絵本
+
+</p>
+
+<p class="catch">
+
+点をひとつ。<br>
+
+またひとつ。
+
+</p>
+
 </header>
 
 <main>
 
-  <section>
-    <h2>Profile</h2>
-    <p>
-      うさぎや点描画を中心に、やさしく静かな世界を描いています。
-    </p>
-    <p>
-      作品を通して、少しだけ心がやわらぐ時間を届けられたら嬉しいです。
-    </p>
-  </section>
+<section>
 
-  <section>
-    <h2>Books</h2>
+<h2>プロフィール</h2>
 
-    <div class="book">
-      <h3>いちごほっぺのくろうさ 01</h3>
-      <p>
-        いちごほっぺがチャームポイントの「くろうさ」の小さな画集です。
-        のんびりしたり、あわてたり、ちょっぴり緊張したり。
-      </p>
-    </div>
+<div class="profile">
 
-    <div class="book">
-      <h3>点の夢 01</h3>
-      <p>
-        点描という技法で描いた、うさぎや抽象画をまとめた作品集です。
-        静かな時間をゆっくり眺めるように楽しんでいただけたら嬉しいです。
-      </p>
-    </div>
+うさぎや点描画を中心に、
 
-    <div class="book">
-      <h3>てんしのクレヨン</h3>
-      <p>
-        やさしい物語にイラストを添えて制作している絵本です。
-        詳細は準備中です。
-      </p>
-    </div>
+やさしく静かな世界を描いています。
 
-    <a class="button" href="#" target="_blank">Amazon著者ページ</a>
-  </section>
+<br><br>
 
-  <section>
-    <h2>Download</h2>
-    <p>
-      点描画入門書の特典ページは準備中です。
-    </p>
-    <p>
-      ぬりえPDFのダウンロードページを、こちらに追加予定です。
-    </p>
-  </section>
+作品を通して、
 
-  <section>
-    <h2>SNS</h2>
-    <a class="button" href="https://www.instagram.com/makoto_usagi_art" target="_blank">Instagram</a>
-    <a class="button sub" href="https://www.threads.net/@makoto_usagi_art" target="_blank">Threads</a>
-  </section>
+少しだけ心がやわらぐ時間を
+
+届けられたら嬉しいです。
+
+</div>
+
+</section>
+
+<section>
+
+<h2>作品</h2>
+
+<div class="books">
+
+<div class="book">
+
+<img src="kurousa01-cover.png">
+
+<h3>
+
+いちごほっぺのくろうさ01
+
+</h3>
+
+<p>
+
+いちごほっぺがチャームポイントの
+
+「くろうさ」の作品集です。
+
+</p>
+
+<a class="button"
+
+href="#">
+
+Amazonで見る
+
+</a>
+
+</div>
+
+<div class="book">
+
+<img src="tennoyume01-cover.png">
+
+<h3>
+
+点の夢01
+
+</h3>
+
+<p>
+
+点描という技法で描いた
+
+作品をまとめた画集です。
+
+</p>
+
+<a class="button"
+
+href="#">
+
+Amazonで見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>ダウンロード</h2>
+
+<p>
+
+点描画入門書の特典ページを
+
+準備中です。
+
+</p>
+
+</section>
+
+<section>
+
+<h2>SNS</h2>
+
+<p>
+
+Instagram
+
+<br>
+
+Threads
+
+<br>
+
+Amazon著者ページ
+
+</p>
+
+</section>
+
+<footer>
+
+© Seki Makoto
+
+</footer>
 
 </main>
 
-<footer>
-  © Seki Makoto
-</footer>
-
 </body>
+
 </html>

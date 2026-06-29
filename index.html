@@ -5,146 +5,227 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>セキマコト公式サイト</title>
+<title>セキマコトのアトリエ</title>
 
 <style>
 
-body{
-    margin:0;
-    background:#fffaf8;
-    font-family:"Hiragino Sans","Yu Gothic",sans-serif;
-    color:#444;
+*{
+box-sizing:border-box;
 }
+
+body{
+
+margin:0;
+
+font-family:
+"Hiragino Sans",
+"Yu Gothic",
+sans-serif;
+
+background:#fffaf9;
+
+color:#444;
+
+line-height:1.9;
+
+}
+
+/*----------------*/
 
 header{
 
-    background:#fff3f3;
-    text-align:center;
-    padding:40px 20px;
+background:#fff2f2;
+
+text-align:center;
+
+padding:55px 20px;
 
 }
 
 header img{
 
-    width:180px;
-    max-width:70%;
+width:170px;
+
+max-width:60%;
 
 }
 
 h1{
 
-    margin-top:15px;
-    margin-bottom:5px;
-    font-size:34px;
+font-size:38px;
+
+margin:18px 0 5px;
 
 }
 
 .subtitle{
 
-    color:#777;
+color:#777;
+
+font-size:18px;
 
 }
 
 .catch{
 
-    margin-top:25px;
-    font-size:20px;
-    color:#666;
+margin-top:25px;
+
+font-size:26px;
+
+line-height:1.5;
+
+font-weight:300;
 
 }
 
+/*----------------*/
+
 main{
 
-    width:92%;
-    max-width:900px;
-    margin:auto;
+max-width:950px;
+
+margin:auto;
+
+padding:25px;
 
 }
 
 section{
 
-    margin-top:45px;
+margin:70px 0;
 
 }
 
 h2{
 
-    border-left:8px solid #efb0b8;
-    padding-left:12px;
+font-size:32px;
+
+margin-bottom:20px;
+
+border-left:10px solid #f0aeb8;
+
+padding-left:15px;
 
 }
 
-.profile{
+/*----------------*/
 
-    line-height:2;
+.welcome{
+
+font-size:20px;
+
+line-height:2;
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
 
 }
+
+/*----------------*/
 
 .books{
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
 
 }
 
 .book{
 
-    background:white;
-    border-radius:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    padding:20px;
+background:white;
+
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 
 }
 
 .book img{
 
-    width:100%;
-    border-radius:10px;
+width:100%;
+
+display:block;
+
+}
+
+.book-body{
+
+padding:20px;
 
 }
 
 .book h3{
 
-    margin-top:15px;
+margin-top:0;
+
+font-size:24px;
 
 }
 
 .button{
 
-    display:inline-block;
+display:inline-block;
 
-    margin-top:15px;
+margin-top:12px;
 
-    background:#f09ca8;
+padding:11px 22px;
 
-    color:white;
+border-radius:999px;
 
-    padding:10px 20px;
+background:#ef9aa8;
 
-    border-radius:999px;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.2s;
 
 }
 
 .button:hover{
 
-    background:#e57d8d;
+background:#e17d90;
 
 }
 
+/*----------------*/
+
+.note{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+/*----------------*/
+
 footer{
 
-    margin-top:60px;
+margin-top:80px;
 
-    padding:30px;
+padding:40px;
 
-    text-align:center;
+text-align:center;
 
-    color:#999;
-
-    font-size:14px;
+color:#999;
 
 }
 
@@ -156,23 +237,23 @@ footer{
 
 <header>
 
-<img src="kurousa-bust.png">
+<img src="images/kurousa-bust.png" alt="くろうさ">
 
 <h1>セキマコト</h1>
 
-<p class="subtitle">
+<div class="subtitle">
 
 点描画・イラスト・絵本
 
-</p>
+</div>
 
-<p class="catch">
+<div class="catch">
 
 点をひとつ。<br>
 
 またひとつ。
 
-</p>
+</div>
 
 </header>
 
@@ -180,21 +261,25 @@ footer{
 
 <section>
 
-<h2>プロフィール</h2>
+<div class="welcome">
 
-<div class="profile">
-
-うさぎや点描画を中心に、
-
-やさしく静かな世界を描いています。
+ようこそ。
 
 <br><br>
 
-作品を通して、
+ここは、
+
+点描画や絵本、
+
+小さなうさぎたちを描いている
+
+「セキマコトのアトリエ」です。
+
+<br><br>
 
 少しだけ心がやわらぐ時間を
 
-届けられたら嬉しいです。
+過ごしていただけたら嬉しいです。
 
 </div>
 
@@ -208,7 +293,9 @@ footer{
 
 <div class="book">
 
-<img src="kurousa01-cover.png">
+<img src="images/kurousa01-cover.png">
+
+<div class="book-body">
 
 <h3>
 
@@ -220,7 +307,7 @@ footer{
 
 いちごほっぺがチャームポイントの
 
-「くろうさ」の作品集です。
+くろうさの日常を描いた作品集です。
 
 </p>
 
@@ -234,9 +321,13 @@ Amazonで見る
 
 </div>
 
+</div>
+
 <div class="book">
 
-<img src="tennoyume01-cover.png">
+<img src="images/tennoyume01-cover.png">
+
+<div class="book-body">
 
 <h3>
 
@@ -264,39 +355,67 @@ Amazonで見る
 
 </div>
 
+</div>
+
+</section>
+
+<section>
+
+<h2>プロフィール</h2>
+
+<div class="note">
+
+うさぎや点描画を中心に、
+
+やさしく静かな世界を描いています。
+
+<br><br>
+
+作品を通して、
+
+少しだけ心がやわらぐ時間を
+
+届けられたら嬉しいです。
+
+</div>
+
+</section>
+
+<section>
+
+<h2>制作中</h2>
+
+<div class="note">
+
+📖 絵本
+
+<b>「てんしのクレヨン」</b>
+
+制作中です。
+
+<br><br>
+
+完成しましたら、
+
+こちらでもご紹介いたします。
+
+</div>
+
 </section>
 
 <section>
 
 <h2>ダウンロード</h2>
 
-<p>
+<div class="note">
 
-点描画入門書の特典ページを
+点描画入門書の
+
+特典ダウンロードページを
 
 準備中です。
 
-</p>
-
-</section>
-
-<section>
-
-<h2>SNS</h2>
-
-<p>
-
-Instagram
-
-<br>
-
-Threads
-
-<br>
-
-Amazon著者ページ
-
-</p>
+</div>
 
 </section>
 

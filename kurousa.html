@@ -5,30 +5,233 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>くろうさ図鑑｜セキマコトの小さな美術館</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+.kurousa-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+}
+
+.kurousa-card{
+  background:#fff;
+  border-radius:22px;
+  padding:16px;
+  text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.kurousa-card img{
+  height:130px;
+  max-width:100%;
+  object-fit:contain;
+  margin-bottom:10px;
+}
+
+.kurousa-name{
+  font-weight:bold;
+  margin-bottom:4px;
+}
+
+.kurousa-role{
+  font-size:.9rem;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
+
 <header>
-<img src="images/characters/kurousa-welcome.png" alt="くろうさ">
+<img src="images/characters/kurousa-welcome.png" alt="くろうさ館長">
 <h1>くろうさ図鑑</h1>
 <p>小さな美術館の案内係たち</p>
 </header>
 
 <main>
-<div class="grid">
-<div class="card"><img src="images/characters/kurousa-welcome.png"><div class="name">ようこそ</div></div>
-<div class="card"><img src="images/characters/kurousa-thanks.png"><div class="name">ありがとう</div></div>
-<div class="card"><img src="images/characters/kurousa-mail.png"><div class="name">おたより</div></div>
-<div class="card"><img src="images/characters/kurousa-pencil.png"><div class="name">制作</div></div>
-<div class="card"><img src="images/characters/kurousa-camera.png"><div class="name">撮影</div></div>
-<div class="card"><img src="images/characters/kurousa-star.png"><div class="name">おすすめ</div></div>
-<div class="card"><img src="images/characters/kurousa-book-intro.png"><div class="name">本紹介</div></div>
-<div class="card"><img src="images/characters/kurousa-dotting.png"><div class="name">点描</div></div>
-<div class="card"><img src="images/characters/kurousa-coffee.png"><div class="name">休憩</div></div>
+
+<section>
+<div class="card">
+<img class="kurousa-small" src="images/characters/kurousa-book-intro.png" alt="案内くろうさ">
+
+<h2>くろうさ館長と仲間たち</h2>
+
+<p>
+セキマコトの小さな美術館では、くろうさたちがいろいろな場所を案内します。
+</p>
+
+<p>
+本を紹介したり、点描を描いたり、おたよりを届けたり。  
+それぞれのくろうさに、小さな役割があります。
+</p>
+</div>
+</section>
+
+<section>
+<h2>図鑑</h2>
+
+<div class="kurousa-grid">
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-welcome.png" alt="ようこそくろうさ">
+<div class="kurousa-name">ようこそくろうさ</div>
+<div class="kurousa-role">美術館の入口担当</div>
 </div>
 
+<div class="kurousa-card">
+<img src="images/characters/kurousa-thanks.png" alt="ありがとうくろうさ">
+<div class="kurousa-name">ありがとうくろうさ</div>
+<div class="kurousa-role">お礼・締めのごあいさつ</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-mail.png" alt="おたよりくろうさ">
+<div class="kurousa-name">おたよりくろうさ</div>
+<div class="kurousa-role">Contact担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-pencil.png" alt="えんぴつくろうさ">
+<div class="kurousa-name">えんぴつくろうさ</div>
+<div class="kurousa-role">制作・下描き担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-camera.png" alt="カメラくろうさ">
+<div class="kurousa-name">カメラくろうさ</div>
+<div class="kurousa-role">撮影・制作記録担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-star.png" alt="おすすめくろうさ">
+<div class="kurousa-name">おすすめくろうさ</div>
+<div class="kurousa-role">おすすめ作品担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-sit.png" alt="ちょこんくろうさ">
+<div class="kurousa-name">ちょこんくろうさ</div>
+<div class="kurousa-role">余白・休憩担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-walk.png" alt="おさんぽくろうさ">
+<div class="kurousa-name">おさんぽくろうさ</div>
+<div class="kurousa-role">館内案内担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-thinking.png" alt="考え中くろうさ">
+<div class="kurousa-name">考え中くろうさ</div>
+<div class="kurousa-role">アイデア・考えごと担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-question.png" alt="はてなくろうさ">
+<div class="kurousa-name">はてなくろうさ</div>
+<div class="kurousa-role">困った時・案内担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-ok.png" alt="OKくろうさ">
+<div class="kurousa-name">OKくろうさ</div>
+<div class="kurousa-role">確認・完了担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-heart.png" alt="ハートくろうさ">
+<div class="kurousa-name">ハートくろうさ</div>
+<div class="kurousa-role">やさしい気持ち担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-music.png" alt="音楽くろうさ">
+<div class="kurousa-name">音楽くろうさ</div>
+<div class="kurousa-role">ごきげん担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-moon.png" alt="おやすみくろうさ">
+<div class="kurousa-name">おやすみくろうさ</div>
+<div class="kurousa-role">夜・おやすみ担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-coffee.png" alt="コーヒーくろうさ">
+<div class="kurousa-name">コーヒーくろうさ</div>
+<div class="kurousa-role">休憩・アトリエ便り担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-book.png" alt="読書くろうさ">
+<div class="kurousa-name">読書くろうさ</div>
+<div class="kurousa-role">本を読む担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-book-intro.png" alt="本紹介くろうさ">
+<div class="kurousa-name">本紹介くろうさ</div>
+<div class="kurousa-role">Books担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-bow.png" alt="おじぎくろうさ">
+<div class="kurousa-name">おじぎくろうさ</div>
+<div class="kurousa-role">ごあいさつ担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-dotting.png" alt="点描くろうさ">
+<div class="kurousa-name">点描くろうさ</div>
+<div class="kurousa-role">点描画教室担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-flower.png" alt="お花くろうさ">
+<div class="kurousa-name">お花くろうさ</div>
+<div class="kurousa-role">花・季節展示担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-gift.png" alt="ギフトくろうさ">
+<div class="kurousa-name">ギフトくろうさ</div>
+<div class="kurousa-role">Downloads担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-happy.png" alt="よろこびくろうさ">
+<div class="kurousa-name">よろこびくろうさ</div>
+<div class="kurousa-role">うれしいお知らせ担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-idea.png" alt="ひらめきくろうさ">
+<div class="kurousa-name">ひらめきくろうさ</div>
+<div class="kurousa-role">アイデア担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-paint.png" alt="絵描きくろうさ">
+<div class="kurousa-name">絵描きくろうさ</div>
+<div class="kurousa-role">制作室担当</div>
+</div>
+
+<div class="kurousa-card">
+<img src="images/characters/kurousa-pc.png" alt="パソコンくろうさ">
+<div class="kurousa-name">パソコンくろうさ</div>
+<div class="kurousa-role">ホームページ・更新担当</div>
+</div>
+
+</div>
+</section>
+
 <p><a href="index.html">← 小さな美術館へ戻る</a></p>
+
 </main>
 
-<footer>© セキマコトの小さな美術館</footer>
+<footer>
+© セキマコトの小さな美術館
+</footer>
+
 </body>
 </html>

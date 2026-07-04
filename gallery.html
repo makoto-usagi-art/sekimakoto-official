@@ -5,14 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery｜セキマコトの小さな美術館</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+.gallery-room{margin-bottom:56px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.art-card{background:#fff;border-radius:18px;padding:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);cursor:pointer}
+.art-card img{width:100%;border-radius:12px;display:block}
+.art-id{font-size:.8rem;color:#999;margin-top:8px;text-align:center}
+.art-title{text-align:center;font-weight:bold;font-size:.95rem}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(40,32,30,.86);z-index:99;align-items:center;justify-content:center;padding:18px}
+.lightbox.show{display:flex}
+.lightbox-inner{max-width:920px;width:100%;text-align:center;color:white}
+.lightbox img{max-width:96%;max-height:78vh;border-radius:14px;background:white}
+.lightbox-title{font-size:1.1rem;margin-top:12px}
+.close{position:fixed;top:18px;right:24px;color:white;font-size:34px;cursor:pointer}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/characters/kurousa-gallery.png" onerror="this.src='images/characters/kurousa-welcome.png'" alt="くろうさ">
-  <h1>Gallery</h1>
-  <p>セキマコトの小さな展示室</p>
+<img src="images/characters/kurousa-welcome.png" alt="くろうさ">
+<h1>Gallery</h1>
+<p>セキマコトの小さな展示室</p>
 </header>
 
 <main>
@@ -22,41 +37,52 @@
 画像を押すと、大きく見ることができます。
 </p>
 
+<section class="gallery-room">
 <h2>Monochrome</h2>
-<div class="gallery">
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-001.webp')"><img src="images/gallery/thumbnails/mono-001.webp"><div class="caption">M001</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-002.webp')"><img src="images/gallery/thumbnails/mono-002.webp"><div class="caption">M002</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-003.webp')"><img src="images/gallery/thumbnails/mono-003.webp"><div class="caption">M003</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-004.webp')"><img src="images/gallery/thumbnails/mono-004.webp"><div class="caption">M004</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-005.webp')"><img src="images/gallery/thumbnails/mono-005.webp"><div class="caption">M005</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-006.webp')"><img src="images/gallery/thumbnails/mono-006.webp"><div class="caption">M006</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-007.webp')"><img src="images/gallery/thumbnails/mono-007.webp"><div class="caption">M007</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-008.webp')"><img src="images/gallery/thumbnails/mono-008.webp"><div class="caption">M008</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-009.webp')"><img src="images/gallery/thumbnails/mono-009.webp"><div class="caption">M009</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-010.webp')"><img src="images/gallery/thumbnails/mono-010.webp"><div class="caption">M010</div></div>
-  <div class="item" onclick="openImage('images/gallery/monochrome/mono-011.webp')"><img src="images/gallery/thumbnails/mono-011.webp"><div class="caption">M011</div></div>
-</div>
+<div class="gallery-grid">
 
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-001.webp','M001','祈りのベール')"><img src="images/gallery/thumbnails/mono-001.webp"><div class="art-id">M001</div><div class="art-title">祈りのベール</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-002.webp','M002','整える光')"><img src="images/gallery/thumbnails/mono-002.webp"><div class="art-id">M002</div><div class="art-title">整える光</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-003.webp','M003','泉の祈り')"><img src="images/gallery/thumbnails/mono-003.webp"><div class="art-id">M003</div><div class="art-title">泉の祈り</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-004.webp','M004','秘密の香り')"><img src="images/gallery/thumbnails/mono-004.webp"><div class="art-id">M004</div><div class="art-title">秘密の香り</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-005.webp','M005','守りたいぬくもり')"><img src="images/gallery/thumbnails/mono-005.webp"><div class="art-id">M005</div><div class="art-title">守りたいぬくもり</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-006.webp','M006','ハートを描くうさぎ')"><img src="images/gallery/thumbnails/mono-006.webp"><div class="art-id">M006</div><div class="art-title">ハートを描くうさぎ</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-007.webp','M007','ぐんぐん、のびのび')"><img src="images/gallery/thumbnails/mono-007.webp"><div class="art-id">M007</div><div class="art-title">ぐんぐん、のびのび</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-008.webp','M008','うさぎのシルエット（仮）')"><img src="images/gallery/thumbnails/mono-008.webp"><div class="art-id">M008</div><div class="art-title">うさぎのシルエット（仮）</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-009.webp','M009','旅人とりんご（仮）')"><img src="images/gallery/thumbnails/mono-009.webp"><div class="art-id">M009</div><div class="art-title">旅人とりんご（仮）</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-010.webp','M010','うさぎとカーニバル（仮）')"><img src="images/gallery/thumbnails/mono-010.webp"><div class="art-id">M010</div><div class="art-title">うさぎとカーニバル（仮）</div></div>
+<div class="art-card" onclick="openImage('images/gallery/monochrome/mono-011.webp','M011','ぬくもり（仮）')"><img src="images/gallery/thumbnails/mono-011.webp"><div class="art-id">M011</div><div class="art-title">ぬくもり（仮）</div></div>
+
+</div>
+</section>
+
+<section class="gallery-room">
 <h2>Color</h2>
-<div class="gallery">
-  <div class="item" onclick="openImage('images/gallery/color/color-001.webp')"><img src="images/gallery/thumbnails/color-001.webp"><div class="caption">C001</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-002.webp')"><img src="images/gallery/thumbnails/color-002.webp"><div class="caption">C002</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-003.webp')"><img src="images/gallery/thumbnails/color-003.webp"><div class="caption">C003</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-004.webp')"><img src="images/gallery/thumbnails/color-004.webp"><div class="caption">C004</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-005.webp')"><img src="images/gallery/thumbnails/color-005.webp"><div class="caption">C005</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-006.webp')"><img src="images/gallery/thumbnails/color-006.webp"><div class="caption">C006</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-007.webp')"><img src="images/gallery/thumbnails/color-007.webp"><div class="caption">C007</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-008.webp')"><img src="images/gallery/thumbnails/color-008.webp"><div class="caption">C008</div></div>
-  <div class="item" onclick="openImage('images/gallery/color/color-009.webp')"><img src="images/gallery/thumbnails/color-009.webp"><div class="caption">C009</div></div>
-</div>
+<div class="gallery-grid">
 
-<a class="back" href="index.html">← 小さな美術館へ戻る</a>
+<div class="art-card" onclick="openImage('images/gallery/color/color-001.webp','C001','胞子が見せる幻のうさぎ')"><img src="images/gallery/thumbnails/color-001.webp"><div class="art-id">C001</div><div class="art-title">胞子が見せる幻のうさぎ</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-002.webp','C002','にんじんからはじまる朝')"><img src="images/gallery/thumbnails/color-002.webp"><div class="art-id">C002</div><div class="art-title">にんじんからはじまる朝</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-003.webp','C003','ピンクのティータイム')"><img src="images/gallery/thumbnails/color-003.webp"><div class="art-id">C003</div><div class="art-title">ピンクのティータイム</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-004.webp','C004','ぼーっと哲学')"><img src="images/gallery/thumbnails/color-004.webp"><div class="art-id">C004</div><div class="art-title">ぼーっと哲学</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-005.webp','C005','虹いろドライブ')"><img src="images/gallery/thumbnails/color-005.webp"><div class="art-id">C005</div><div class="art-title">虹いろドライブ</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-006.webp','C006','きのこときょとん')"><img src="images/gallery/thumbnails/color-006.webp"><div class="art-id">C006</div><div class="art-title">きのこときょとん</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-007.webp','C007','こっそりクッキー')"><img src="images/gallery/thumbnails/color-007.webp"><div class="art-id">C007</div><div class="art-title">こっそりクッキー</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-008.webp','C008','クローバーとうさぎ（仮）')"><img src="images/gallery/thumbnails/color-008.webp"><div class="art-id">C008</div><div class="art-title">クローバーとうさぎ（仮）</div></div>
+<div class="art-card" onclick="openImage('images/gallery/color/color-009.webp','C009','コーヒータイム（仮）')"><img src="images/gallery/thumbnails/color-009.webp"><div class="art-id">C009</div><div class="art-title">コーヒータイム（仮）</div></div>
+
+</div>
+</section>
+
+<p><a href="index.html">← 小さな美術館へ戻る</a></p>
 
 </main>
 
 <div class="lightbox" id="lightbox" onclick="closeImage()">
-  <span class="close">×</span>
-  <img id="lightbox-img" src="">
+<span class="close">×</span>
+<div class="lightbox-inner">
+<img id="lightbox-img" src="">
+<div class="lightbox-title" id="lightbox-title"></div>
+</div>
 </div>
 
 <footer>
@@ -64,8 +90,9 @@
 </footer>
 
 <script>
-function openImage(src){
+function openImage(src,id,title){
   document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox-title").textContent = id + "｜" + title;
   document.getElementById("lightbox").classList.add("show");
 }
 function closeImage(){

@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery｜セキマコトの小さな美術館</title>
+<style>
+body{margin:0;font-family:"Hiragino Sans","Yu Gothic",sans-serif;background:#fffaf8;color:#3f3a37;line-height:1.8}
+header{text-align:center;padding:48px 20px 34px;background:#fff0f3}
+header img{width:130px;max-width:50%}
+h1{margin:14px 0 6px;font-size:2rem}
+main{max-width:1080px;margin:auto;padding:36px 18px 70px}
+h2{border-left:10px solid #f5a9b8;padding-left:14px;margin-top:48px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.item{background:#fff;border-radius:18px;padding:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);cursor:pointer}
+.item img{width:100%;border-radius:12px;display:block}
+.caption{text-align:center;font-size:.9rem;color:#777;margin-top:8px}
+.back{display:inline-block;margin-top:28px;color:#7a5f5f}
+.lightbox{display:none;position:fixed;z-index:99;inset:0;background:rgba(40,32,30,.82);align-items:center;justify-content:center;padding:18px}
+.lightbox img{max-width:96%;max-height:88vh;border-radius:14px;background:#fff}
+.lightbox.show{display:flex}
+.close{position:fixed;top:18px;right:24px;color:white;font-size:34px;cursor:pointer}
+footer{text-align:center;padding:34px;background:#fff0f3;color:#777}
+</style>
+</head>
 
+<body>
+
+<header>
+  <img src="images/characters/kurousa-gallery.png" onerror="this.src='images/characters/kurousa-welcome.png'" alt="くろうさ">
+  <h1>Gallery</h1>
+  <p>セキマコトの小さな展示室</p>
+</header>
+
+<main>
+
+<p>
+点描で描いたうさぎたちの作品を展示しています。<br>
+画像を押すと、大きく見ることができます。
+</p>
+
+<h2>Monochrome</h2>
+<div class="gallery">
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-001.webp')"><img src="images/gallery/thumbnails/mono-001.webp"><div class="caption">M001</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-002.webp')"><img src="images/gallery/thumbnails/mono-002.webp"><div class="caption">M002</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-003.webp')"><img src="images/gallery/thumbnails/mono-003.webp"><div class="caption">M003</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-004.webp')"><img src="images/gallery/thumbnails/mono-004.webp"><div class="caption">M004</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-005.webp')"><img src="images/gallery/thumbnails/mono-005.webp"><div class="caption">M005</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-006.webp')"><img src="images/gallery/thumbnails/mono-006.webp"><div class="caption">M006</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-007.webp')"><img src="images/gallery/thumbnails/mono-007.webp"><div class="caption">M007</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-008.webp')"><img src="images/gallery/thumbnails/mono-008.webp"><div class="caption">M008</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-009.webp')"><img src="images/gallery/thumbnails/mono-009.webp"><div class="caption">M009</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-010.webp')"><img src="images/gallery/thumbnails/mono-010.webp"><div class="caption">M010</div></div>
+  <div class="item" onclick="openImage('images/gallery/monochrome/mono-011.webp')"><img src="images/gallery/thumbnails/mono-011.webp"><div class="caption">M011</div></div>
+</div>
+
+<h2>Color</h2>
+<div class="gallery">
+  <div class="item" onclick="openImage('images/gallery/color/color-001.webp')"><img src="images/gallery/thumbnails/color-001.webp"><div class="caption">C001</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-002.webp')"><img src="images/gallery/thumbnails/color-002.webp"><div class="caption">C002</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-003.webp')"><img src="images/gallery/thumbnails/color-003.webp"><div class="caption">C003</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-004.webp')"><img src="images/gallery/thumbnails/color-004.webp"><div class="caption">C004</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-005.webp')"><img src="images/gallery/thumbnails/color-005.webp"><div class="caption">C005</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-006.webp')"><img src="images/gallery/thumbnails/color-006.webp"><div class="caption">C006</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-007.webp')"><img src="images/gallery/thumbnails/color-007.webp"><div class="caption">C007</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-008.webp')"><img src="images/gallery/thumbnails/color-008.webp"><div class="caption">C008</div></div>
+  <div class="item" onclick="openImage('images/gallery/color/color-009.webp')"><img src="images/gallery/thumbnails/color-009.webp"><div class="caption">C009</div></div>
+</div>
+
+<a class="back" href="index.html">← 小さな美術館へ戻る</a>
+
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+  <span class="close">×</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<footer>
+© セキマコトの小さな美術館
+</footer>
+
+<script>
+function openImage(src){
+  document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox").classList.add("show");
+}
+function closeImage(){
+  document.getElementById("lightbox").classList.remove("show");
+}
+</script>
+
+</body>
+</html>

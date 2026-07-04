@@ -5,8 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About｜セキマコトの小さな美術館</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+.profile-block{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:26px;
+  align-items:start;
+}
+
+.profile-block img{
+  width:150px;
+  max-width:100%;
+  display:block;
+  margin:auto;
+}
+
+.message{
+  background:#fff7f8;
+  border-radius:20px;
+  padding:22px;
+  margin-top:24px;
+}
+
+@media(max-width:700px){
+  .profile-block{
+    grid-template-columns:1fr;
+    text-align:left;
+  }
+}
+</style>
 </head>
+
 <body>
+
 <header>
 <img src="images/characters/kurousa-bow.png" alt="おじぎくろうさ">
 <h1>About</h1>
@@ -14,23 +46,95 @@
 </header>
 
 <main>
-<div class="card">
+
+<section>
+<div class="card profile-block">
+
+<img src="images/characters/kurousa-bust.png" alt="くろうさ館長">
+
+<div>
 <h2>セキマコト</h2>
+
 <p>
-うさぎや点描画を中心に、やさしく静かな世界を描いています。
+点描画、うさぎのイラスト、絵本などを制作しています。
 </p>
+
 <p>
-点をひとつ、またひとつ。  
-小さな点が重なって、うさぎたちの時間や物語が生まれていきます。
+点をひとつ。  
+またひとつ。
 </p>
+
 <p>
-この小さな美術館では、作品、本、制作の記録などを少しずつ展示していきます。
+小さな点が重なって、静かな時間や、やさしい物語が生まれていく。  
+そんな作品づくりを大切にしています。
 </p>
 </div>
 
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2>この美術館について</h2>
+
+<p>
+「セキマコトの小さな美術館」は、作品や本、制作の記録を少しずつ展示していく場所です。
+</p>
+
+<p>
+完成した作品だけでなく、これから生まれる作品や、制作の途中も大切にしながら育てていきます。
+</p>
+
+<div class="message">
+<strong>くろうさ館長より</strong><br>
+ゆっくり見ていってください。<br>
+気になる作品があったら、また会いに来てくださいね。
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2>制作しているもの</h2>
+
+<p>
+・点描画<br>
+・うさぎのイラスト<br>
+・くろうさ作品<br>
+・絵本<br>
+・点描画入門書<br>
+・Kindle本、ペーパーバック
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2>これから</h2>
+
+<p>
+この美術館には、これから少しずつ新しい展示室を増やしていきます。
+</p>
+
+<p>
+Gallery、Books、Downloads、くろうさ図鑑、Sketchページなどを通して、作品の世界をゆっくり広げていく予定です。
+</p>
+
+</div>
+</section>
+
 <p><a href="index.html">← 小さな美術館へ戻る</a></p>
+
 </main>
 
-<footer>© セキマコトの小さな美術館</footer>
+<footer>
+© セキマコトの小さな美術館
+</footer>
+
 </body>
 </html>

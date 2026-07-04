@@ -5,8 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Books｜セキマコトの小さな美術館</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+.book-detail{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  align-items:start;
+  margin-bottom:48px;
+}
+.book-cover{
+  background:#fff;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+.book-cover img{
+  width:100%;
+  border-radius:14px;
+}
+.book-text{
+  background:#fff;
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+.book-meta{
+  color:#777;
+  font-size:.92rem;
+  margin-bottom:14px;
+}
+.note-box{
+  background:#fff7f8;
+  border-radius:18px;
+  padding:18px;
+  margin-top:18px;
+}
+</style>
 </head>
+
 <body>
+
 <header>
 <img src="images/characters/kurousa-book-intro.png" alt="本紹介くろうさ">
 <h1>Books</h1>
@@ -14,24 +53,96 @@
 </header>
 
 <main>
+
+<section>
 <h2>出版作品</h2>
-<div class="books">
-<div class="card">
+
+<div class="book-detail">
+
+<div class="book-cover">
 <img src="images/books/kurousa01-cover.png" alt="いちごほっぺのくろうさ01">
-<h3>いちごほっぺのくろうさ 01</h3>
-<p>いちごほっぺがチャームポイントの、くろうさの小さな作品集です。</p>
 </div>
 
-<div class="card">
+<div class="book-text">
+<h3>いちごほっぺのくろうさ 01</h3>
+<div class="book-meta">画集｜電子書籍・ペーパーバック</div>
+
+<p>
+いちごほっぺがチャームポイントの、くろうさの小さな作品集です。
+</p>
+
+<p>
+のんびりしたり、あわてたり、ちょっぴり緊張したり。  
+くろうさの日常を、やさしいモノクロイラストでまとめました。
+</p>
+
+<div class="note-box">
+🐰 うさぎが好きな方、ほっと一息つきたい方におすすめです。
+</div>
+
+<a class="button pink" href="https://amzn.asia/d/07u2csC7" target="_blank">Amazonで見る</a>
+</div>
+
+</div>
+
+<div class="book-detail">
+
+<div class="book-cover">
 <img src="images/books/tennoyume01-cover.png" alt="点の夢01">
+</div>
+
+<div class="book-text">
 <h3>点の夢 01</h3>
-<p>点描で描いた、静かな世界をまとめた作品集です。</p>
+<div class="book-meta">点描画集｜電子書籍・ペーパーバック</div>
+
+<p>
+点をひとつ。  
+またひとつ。
+</p>
+
+<p>
+点描で描いた、うさぎや抽象作品をまとめた作品集です。  
+静かな時間の中で生まれた作品たちを、ゆっくり眺めていただけたら嬉しいです。
+</p>
+
+<div class="note-box">
+🎨 点描画の雰囲気を楽しみたい方におすすめです。
 </div>
+
+<a class="button pink" href="https://amzn.asia/d/0ikoPAyY" target="_blank">Amazonで見る</a>
 </div>
+
+</div>
+
+</section>
+
+<section>
+<h2>制作中・準備中</h2>
+
+<div class="card">
+<img class="kurousa-small" src="images/characters/kurousa-pencil.png" alt="制作中くろうさ">
+
+<h3>てんしのクレヨン</h3>
+<p>
+やさしい物語にイラストを添えて制作している絵本です。  
+完成後、こちらの本棚にも追加予定です。
+</p>
+
+<h3>点描画の描き方 入門書</h3>
+<p>
+点描画をはじめて描く方向けの入門書を準備中です。  
+A4点描ぬりえPDFの特典ページも用意しています。
+</p>
+</div>
+</section>
 
 <p><a href="index.html">← 小さな美術館へ戻る</a></p>
+
 </main>
 
-<footer>© セキマコトの小さな美術館</footer>
+<footer>
+© セキマコトの小さな美術館
+</footer>
+
 </body>
 </html>

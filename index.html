@@ -1,244 +1,144 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>セキマコトの小さな美術館</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: #fffaf8;
-      color: #3f3a37;
-      line-height: 1.9;
-    }
-
-    header {
-      text-align: center;
-      padding: 56px 20px 42px;
-      background: #fff0f3;
-    }
-
-    header img {
-      width: 180px;
-      max-width: 60%;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin: 0;
-      letter-spacing: 0.08em;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-      color: #777;
-      margin-top: 18px;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255,250,248,0.95);
-      border-bottom: 1px solid #eadede;
-      z-index: 10;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      display: inline-block;
-      margin: 6px 10px;
-      color: #3f3a37;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 56px 20px;
-    }
-
-    h2 {
-      border-left: 10px solid #f5a9b8;
-      padding-left: 14px;
-      font-size: 1.8rem;
-      margin-bottom: 28px;
-    }
-
-    .intro {
-      font-size: 1.05rem;
-      max-width: 720px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 18px;
-    }
-
-    .gallery a,
-    .book-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .gallery img,
-    .book-card img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .caption {
-      font-size: 0.9rem;
-      margin-top: 8px;
-      color: #666;
-      text-align: center;
-    }
-
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-    }
-
-    .book-card h3 {
-      margin-bottom: 8px;
-    }
-
-    .character-row {
-      display: flex;
-      gap: 18px;
-      overflow-x: auto;
-      padding-bottom: 12px;
-    }
-
-    .character-row img {
-      height: 150px;
-      background: #fff;
-      border-radius: 18px;
-      padding: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fff0f3;
-      color: #777;
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セキマコトの小さな美術館</title>
+<style>
+body{margin:0;font-family:"Hiragino Sans","Yu Gothic",sans-serif;background:#fffaf8;color:#3f3a37;line-height:1.8}
+header{text-align:center;padding:58px 20px 44px;background:#fff0f3}
+header img{width:170px;max-width:60%}
+h1{font-size:2.2rem;margin:18px 0 8px;letter-spacing:.05em}
+nav{background:#fffaf8;text-align:center;padding:12px;border-bottom:1px solid #eadede;position:sticky;top:0;z-index:10}
+nav a{display:inline-block;margin:6px 10px;color:#3f3a37;text-decoration:none;font-weight:bold}
+main{max-width:1040px;margin:auto;padding:38px 18px 70px}
+section{margin-bottom:54px}
+h2{border-left:10px solid #f5a9b8;padding-left:14px}
+.card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card img{width:100%;border-radius:14px}
+.button{display:inline-block;background:#8c7a70;color:white;text-decoration:none;padding:10px 20px;border-radius:999px;margin-top:10px;font-weight:bold}
+.button.pink{background:#ef9aa8}
+.kurousa-small{width:120px;display:block;margin:0 auto 16px}
+footer{text-align:center;padding:34px;background:#fff0f3;color:#777}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/characters/kurousa-bust.png" alt="くろうさ">
-  <h1>セキマコトの小さな美術館</h1>
-  <p class="tagline">点描画・くろうさ・絵本の小さな展示室</p>
+<img src="images/characters/kurousa-bust.png" alt="くろうさ館長">
+<h1>セキマコトの小さな美術館</h1>
+<p>点描画・くろうさ・絵本の小さな展示室</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="#books">Books</a>
-  <a href="#kurousa">Kurousa</a>
-  <a href="#contact">Contact</a>
+<a href="gallery.html">Gallery</a>
+<a href="books.html">Books</a>
+<a href="downloads.html">Downloads</a>
+<a href="kurousa.html">Kurousa</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<section id="about">
-  <h2>ようこそ</h2>
-  <p class="intro">
-    ここは、セキマコトの作品を少しずつ展示していく小さな美術館です。<br>
-    点をひとつ。またひとつ。<br>
-    うさぎたちの静かな時間や、小さな物語をお届けします。
-  </p>
+<main>
+
+<section>
+<div class="card">
+<img class="kurousa-small" src="images/characters/kurousa-welcome.png" alt="ようこそ">
+<h2>ようこそ</h2>
+<p>
+ここは、セキマコトの作品を少しずつ展示していく小さな美術館です。<br>
+点をひとつ。またひとつ。<br>
+うさぎたちの静かな時間や、小さな物語をお届けします。
+</p>
+</div>
 </section>
 
-<section id="gallery">
-  <h2>Gallery｜小さな展示室</h2>
+<section>
+<h2>Gallery｜展示室</h2>
+<div class="grid">
+<div class="card">
+<img src="images/gallery/thumbnails/mono-001.webp" alt="モノクロ点描">
+<h3>Monochrome</h3>
+<p>モノクロ点描で描いた、静かなうさぎたちの世界。</p>
+<a class="button pink" href="gallery.html">展示室へ</a>
+</div>
 
-  <h3>Monochrome</h3>
-  <div class="gallery">
-    <a href="images/gallery/monochrome/mono-001.webp"><img src="images/gallery/thumbnails/mono-001.webp"><div class="caption">M001</div></a>
-    <a href="images/gallery/monochrome/mono-002.webp"><img src="images/gallery/thumbnails/mono-002.webp"><div class="caption">M002</div></a>
-    <a href="images/gallery/monochrome/mono-003.webp"><img src="images/gallery/thumbnails/mono-003.webp"><div class="caption">M003</div></a>
-    <a href="images/gallery/monochrome/mono-004.webp"><img src="images/gallery/thumbnails/mono-004.webp"><div class="caption">M004</div></a>
-    <a href="images/gallery/monochrome/mono-005.webp"><img src="images/gallery/thumbnails/mono-005.webp"><div class="caption">M005</div></a>
-    <a href="images/gallery/monochrome/mono-006.webp"><img src="images/gallery/thumbnails/mono-006.webp"><div class="caption">M006</div></a>
-    <a href="images/gallery/monochrome/mono-007.webp"><img src="images/gallery/thumbnails/mono-007.webp"><div class="caption">M007</div></a>
-    <a href="images/gallery/monochrome/mono-008.webp"><img src="images/gallery/thumbnails/mono-008.webp"><div class="caption">M008</div></a>
-    <a href="images/gallery/monochrome/mono-009.webp"><img src="images/gallery/thumbnails/mono-009.webp"><div class="caption">M009</div></a>
-    <a href="images/gallery/monochrome/mono-010.webp"><img src="images/gallery/thumbnails/mono-010.webp"><div class="caption">M010</div></a>
-    <a href="images/gallery/monochrome/mono-011.webp"><img src="images/gallery/thumbnails/mono-011.webp"><div class="caption">M011</div></a>
-  </div>
-
-  <h3>Color</h3>
-  <div class="gallery">
-    <a href="images/gallery/color/color-001.webp"><img src="images/gallery/thumbnails/color-001.webp"><div class="caption">C001</div></a>
-    <a href="images/gallery/color/color-002.webp"><img src="images/gallery/thumbnails/color-002.webp"><div class="caption">C002</div></a>
-    <a href="images/gallery/color/color-003.webp"><img src="images/gallery/thumbnails/color-003.webp"><div class="caption">C003</div></a>
-    <a href="images/gallery/color/color-004.webp"><img src="images/gallery/thumbnails/color-004.webp"><div class="caption">C004</div></a>
-    <a href="images/gallery/color/color-005.webp"><img src="images/gallery/thumbnails/color-005.webp"><div class="caption">C005</div></a>
-    <a href="images/gallery/color/color-006.webp"><img src="images/gallery/thumbnails/color-006.webp"><div class="caption">C006</div></a>
-    <a href="images/gallery/color/color-007.webp"><img src="images/gallery/thumbnails/color-007.webp"><div class="caption">C007</div></a>
-    <a href="images/gallery/color/color-008.webp"><img src="images/gallery/thumbnails/color-008.webp"><div class="caption">C008</div></a>
-    <a href="images/gallery/color/color-009.webp"><img src="images/gallery/thumbnails/color-009.webp"><div class="caption">C009</div></a>
-  </div>
+<div class="card">
+<img src="images/gallery/thumbnails/color-001.webp" alt="カラー点描">
+<h3>Color</h3>
+<p>色のある点描で描いた、うさぎたちの小さな毎日。</p>
+<a class="button pink" href="gallery.html">展示室へ</a>
+</div>
+</div>
 </section>
 
-<section id="books">
-  <h2>Books｜本棚</h2>
-  <div class="books">
-    <div class="book-card">
-      <img src="images/books/kurousa01-cover.png" alt="いちごほっぺのくろうさ01">
-      <h3>いちごほっぺのくろうさ 01</h3>
-      <p>モノクロのくろうさの小さな作品集です。</p>
-    </div>
+<section>
+<h2>Books｜本棚</h2>
+<div class="grid">
+<div class="card">
+<img src="images/books/kurousa01-cover.png" alt="いちごほっぺのくろうさ01">
+<h3>いちごほっぺのくろうさ 01</h3>
+<p>くろうさの小さな作品集です。</p>
+<a class="button" href="books.html">本棚へ</a>
+</div>
 
-    <div class="book-card">
-      <img src="images/books/tennoyume01-cover.png" alt="点の夢01">
-      <h3>点の夢 01</h3>
-      <p>点描で描いた静かな世界をまとめた作品集です。</p>
-    </div>
-  </div>
+<div class="card">
+<img src="images/books/tennoyume01-cover.png" alt="点の夢01">
+<h3>点の夢 01</h3>
+<p>点描画作品をまとめた作品集です。</p>
+<a class="button" href="books.html">本棚へ</a>
+</div>
+</div>
 </section>
 
-<section id="kurousa">
-  <h2>Kurousa｜くろうさ図鑑 準備室</h2>
-  <p class="intro">
-    くろうさ館長と、ホームページを案内する立ち絵たちです。<br>
-    図鑑ページは、これから少しずつ開館していきます。
-  </p>
-
-  <div class="character-row">
-    <img src="images/characters/kurousa-welcome.png" alt="ようこそ">
-    <img src="images/characters/kurousa-book-intro.png" alt="本紹介">
-    <img src="images/characters/kurousa-dotting.png" alt="点描">
-    <img src="images/characters/kurousa-coffee.png" alt="コーヒー">
-    <img src="images/characters/kurousa-mail.png" alt="お問い合わせ">
-    <img src="images/characters/kurousa-thanks.png" alt="ありがとう">
-  </div>
+<section>
+<h2>Downloads｜特典室</h2>
+<div class="card">
+<img class="kurousa-small" src="images/characters/kurousa-gift.png" alt="特典くろうさ">
+<p>
+点描画の描き方シリーズをご購入いただいた方向けの、A4点描ぬりえPDF特典ページです。
+</p>
+<a class="button pink" href="downloads.html">ダウンロードページへ</a>
+</div>
 </section>
 
-<section id="contact">
-  <h2>Contact｜リンク</h2>
-  <p class="intro">
-    SNSや販売ページへのリンクは、今後こちらに整理していきます。<br>
-    まずは小さな美術館として、少しずつ展示を整えていきます。
-  </p>
+<section>
+<h2>Kurousa｜くろうさ図鑑</h2>
+<div class="card">
+<img class="kurousa-small" src="images/characters/kurousa-book-intro.png" alt="くろうさ図鑑">
+<p>
+小さな美術館を案内する、くろうさ館長と仲間たちの図鑑です。
+</p>
+<a class="button" href="kurousa.html">図鑑を見る</a>
+</div>
 </section>
+
+<section>
+<h2>About｜学芸員について</h2>
+<div class="card">
+<p>
+セキマコトについて、作品づくりや小さな美術館のことを紹介しています。
+</p>
+<a class="button" href="about.html">Aboutへ</a>
+</div>
+</section>
+
+<section>
+<h2>Contact｜リンク</h2>
+<div class="card">
+<p>
+SNSや販売ページへのリンクをこちらにまとめていきます。
+</p>
+<a class="button" href="contact.html">Contactへ</a>
+</div>
+</section>
+
+</main>
 
 <footer>
-  © セキマコトの小さな美術館
+© セキマコトの小さな美術館
 </footer>
 
 </body>

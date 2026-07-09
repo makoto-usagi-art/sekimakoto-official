@@ -128,3 +128,15 @@ hr{
     border-top:1px solid #ece4e1;
     margin:18px 0;
 }
+.season-card{
+  text-align:center;
+}
+
+.season-image{
+  width:100%;
+  max-width:820px;
+  border-radius:22px;
+  display:block;
+  margin:18px auto;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}

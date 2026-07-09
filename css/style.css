@@ -140,3 +140,29 @@ hr{
   margin:18px auto;
   box-shadow:0 4px 14px rgba(0,0,0,.06);
 }
+
+.atelier-hero{
+  text-align:center;
+}
+
+.atelier-hero img{
+  width:100%;
+  max-width:900px;
+  border-radius:24px;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+  margin:18px auto;
+  display:block;
+}
+
+.atelier-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.atelier-card img{
+  width:100%;
+  border-radius:18px;
+  display:block;
+  margin-bottom:12px;
+}

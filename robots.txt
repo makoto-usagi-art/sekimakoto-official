@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sekimakoto-official.pages.dev/sitemap.xml
